@@ -1,5 +1,5 @@
-var triangle = function(sides) {
-  if (sides = 4 && sides = 4 && sides = 10) {
-  return "not a triangle"
+var triangle = function(side1, side2, side3) {
+  if (side1+side2<side3 || side2+side3<side1 || side3+side1<side2 ) {
+    return "not a triangle"
   }
-  }
+}
