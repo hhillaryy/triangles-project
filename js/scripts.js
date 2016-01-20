@@ -12,17 +12,20 @@ var triangle = function(side1, side2, side3) {
 
 $(document).ready(function() {
   $("form#user-shape").submit(function(event) {
-    var side1 = parseInt($"input#side1").val();
-    var side2 = parseInt($"input#side2").val();
-    var side3 = parseInt($"input#side3").val();
+    var side1 = parseInt($("input#side1").val());
+    var side2 = parseInt($("input#side2").val());
+    var side3 = parseInt($("input#side3").val()); 
     var result = triangle(side1, side2, side3);
 
       if (result === "notAtriangle") {
         $(".triangle").text("not a triangle!");
       } else if (result==="equilateralTriangle") {
-        $(".triangle").text("equilateral triangle");
+        $(".triangle").text("an equilateral triangle");
+      } else if (result==="isocelesTriangle") {
+        $(".triangle").text("an isoceles triangle");
+      } else if (result ==="scaleneTriangle"){
+        $(".triangle").text("a scalene triangle")
       }
-
     event.preventDefault();
   });
 });
